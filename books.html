@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+ <html dir="rtl">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>من نحن</title>
+ <link rel="stylesheet" href="style.css">
+ </head> 
+<body> 
+<header> 
+<h1>الكتب</h1> 
+<nav> 
+<ul> 
+<li><a href="homepage.html">الصفحة الرئيسية</a></li>
+ <li><a href="books.html"> الكتب</a></li>
+ <li><a href="about.html">من نحن</a></li>
+ </ul> 
+</nav>
+ </header>
+ <main> 
+<section id="about">
+<center>
+<h1>قائمة الكتب في المتجر</h1>
+ <table>
+ <thead> 
+<tr>
+ <th>رمز الكتاب ISBN</th>
+ <th>العنوان</th>
+ <th>السعر</th> 
+<th>إظهار التفاصيل</th>
+ <th>اختيار</th>
+
+
+
+</tr>
+ </thead>
+ <tbody> 
+<tr>
+ <td>1234</td> 
+<td>كتاب الجريمة والعقاب </td>
+<td>20.00</td>
+ <td><input type="checkbox" onclick="toggleDetails(this, 'details-1234')"></td>
+ <td><input type="radio" name="bookSelection" value="1234" onclick="showButton()"></td> 
+</tr>
+<tr id="details-1234" class="details"> 
+<td colspan="5">تتناول الرواية قصة روديون راسكولينكوف، الشاب الفقير الذي يقتل امرأة عجوز لتحقيق مكسب مادي، لكنه يبدأ في الشعور بالذنب والاضطراب النفسي بعد الجريمة. تعتبر الرواية دراسة عميقة للنفس البشرية، والعدالة، والأخلاق..</td> 
+</tr>
+
+ <tr>
+ <td>1235</td>
+ <td>الحب في زمن الكوليرا</td>
+ <td>30.00</td> 
+<td><input type="checkbox" onclick="toggleDetails(this, 'details-1235')"></td> 
+<td><input type="radio" name="bookSelection" value="1235" onclick="showButton()"></td>
+ </tr>
+<tr id="details-1235" class="details">
+ <td colspan="5">تدور الرواية حول قصة حب طويلة ومعقدة بين فيرميندا داثا وفلورنتينو أريثا، الذين يظلان ينتظران لأكثر من خمسين عامًا حتى يتمكنا من تحقيق حبهم في النهاية. تستعرض الرواية التغيرات التي تحدث مع مرور الزمن وتأثير الزمن على الحب والعلاقات.</td> 
+</tr>
+
+ <tr>
+ <td>1236</td>
+ <td>البؤساء</td>
+ <td>25.00</td> 
+<td><input type="checkbox" onclick="toggleDetails(this, 'details-1236')"></td> 
+<td><input type="radio" name="bookSelection" value="1236" onclick="showButton()"></td>
+ </tr>
+<tr id="details-1236" class="details">
+ <td colspan="5">تحكي الرواية قصة جان فالجان، الرجل الذي قضى فترة طويلة في السجن بسبب سرقة رغيف خبز. بعد خروجه من السجن، يحاول إعادة بناء حياته في مواجهة تحديات كبيرة وظلم المجتمع. تغوص الرواية في موضوعات العدالة، والفقر، والرحمة..</td> 
+</tr>
+
+ <tr>
+ <td>1237</td> 
+<td>مئة عام من العزلة</td> 
+<td>40.00</td> 
+<td><input type="checkbox" onclick="toggleDetails(this, 'details-1237')"></td> 
+<td><input type="radio" name="bookSelection" value="1237" onclick="showButton()"></td>
+ </tr>
+<tr id="details-1237" class="details"> 
+<td colspan="5">تتبع الرواية قصة عائلة بوينديا على مدار سبعة أجيال في بلدة ماكوندو الخيالية. تتميز الرواية باستخدام السحر الواقعي، حيث تمتزج الأحداث الغريبة والخيالية مع الواقع. تعتبر من أهم الأعمال الأدبية في القرن العشرين.</td>
+ </tr>
+
+ <tr> 
+<td>1238</td> 
+<td>ذهب مع الريح</td>
+ <td>15.00</td> 
+<td><input type="checkbox" onclick="toggleDetails(this, 'details-1238')"></td>
+ <td><input type="radio" name="bookSelection" value="1238" onclick="showButton()"></td> 
+</tr>
+<tr id="details-1238" class="details">
+ <td colspan="5">تدور أحداث الرواية حول الحرب الأهلية الأمريكية وتأثيرها على الجنوب الأمريكي، من خلال حياة سكارليت أوهارا، الشابة الجريئة والمستقلة. تعكس الرواية الصراعات العاطفية والاجتماعية التي تواجهها سكارليت في زمن الاضطرابات والتغيرات..</td> 
+</tr>
+ </tbody>
+ </table>
+<div style="text-align: center;">
+ <button class="button" id="continue-button" onclick="showUserInfoForm()">متابعة</button> 
+</div>
+<form id="user-info-form"> 
+<h2>معلومات المستخدم</h2> 
+<label for="name">الاسم:</label>
+ <input type="text" id="name" name="name" required> <br>
+<label for="email">البريد الإلكتروني:</label>
+ <input type="email" id="email" name="email" required><br>
+ <label for="phone">رقم الهاتف:</label>
+ <input type="text" id="phone" name="phone" required><br>
+ <button type="submit" id="submit-button" onclick="submitForm()">إرسال</button>
+ </form>
+<script> 
+function toggleDetails(checkbox, detailsId)
+ { 
+var detailsRow = document.getElementById(detailsId);
+ detailsRow.style.display = checkbox.checked ? 'table-row' : 'none';
+ }
+function showButton() 
+{ 
+var button = document.getElementById('continue-button');
+ button.style.display = 'block'; 
+}
+function showUserInfoForm() 
+{ 
+var form = document.getElementById('user-info-form'); 
+form.style.display = 'block';
+ var button = document.getElementById('continue-button'); 
+button.style.display = 'none';
+}
+function submitForm()
+ {
+ var selectedBook = document.querySelector('input[name="bookSelection"]:checked');
+ var bookDetails;
+var bookTitle;
+ switch (selectedBook.value) 
+{ case 'B001': 
+{bookTitle = 'كتاب البرمجة 101';
+bookDetails = 'كتاب البرمجة 101 - 20.00';
+ break; }
+case 'B002':
+{bookTitle = 'أساسيات الطبخ';
+ bookDetails = 'أساسيات الطبخ - 30.00';
+ break;}
+ case 'B003':
+{bookTitle = 'تاريخ العالم';
+ bookDetails = 'تاريخ العالم - 25.00';
+ break;}
+ case 'B004':
+{bookTitle = 'فنون الرسم';
+ bookDetails = 'فنون الرسم - 40.00';
+ break; }
+case 'B005':
+{bookTitle = 'أساسيات الرياضيات';
+ bookDetails = 'أساسيات الرياضيات - 15.00';
+ break; }
+default:
+{bookTitle ='';
+ bookDetails = '';}
+ } 
+ alert('معلومات الكتاب المطلوب شراءه:\n' + bookTitle + '\n' + bookDetails);
+}
+ </script>
+</section> 
+</center>
+<center>
+<section id="contact">
+
+ </section>
+ </main> 
+<footer>
+ <p>&copy; 2024 مكتبة الكتب. جميع الحقوق محفوظة.</p> 
+</footer>
+</center>
+</body>
+ </html>

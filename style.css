@@ -1,0 +1,110 @@
+body {
+           font-family: Arial, sans-serif;
+           background-color: #fff7e6; 
+          color: #333; margin: 0;
+           padding: 0;
+ } 
+header { 
+background-color: #d35400;
+ color: #fff; padding: 20px;
+ text-align: center; 
+} 
+p
+{ font-family: 'Arial', sans-serif;
+font-size: 18px;
+ font-weight: bold;
+}
+nav ul {
+ list-style-type: none;
+ padding: 0;
+ }
+ nav ul li {
+ display: inline; 
+margin-right: 10px; 
+} 
+nav ul li a { 
+color: #fff; text-decoration: none;
+ font-weight: bold;
+ } 
+main { padding: 20px; }
+ footer {
+ background-color: #d35400;
+ color: #fff; text-align: center;
+ padding: 10px;
+ position: fixed;
+ bottom: 0; 
+width: 100%; 
+}
+ table { 
+width: 100%;
+ border-collapse: collapse; 
+}
+ th, td {
+ border: 1px solid #ddd;
+ padding: 8px;
+font-family: 'Arial', sans-serif;
+font-size: 16px;
+text-align: center;
+ }
+
+ th
+ { 
+background-color: #e67e22;
+ color: white; 
+} 
+tr:nth-child(even)
+ {
+ background-color: #ffe0b3; 
+} 
+tr:hover { 
+color: #d35400;
+font-weight:bold;
+background-color: #f5cba7;
+cursor: pointer; } 
+td:hover { 
+color: #d34500;
+font-weight:bold;
+background-color: #f5cba7;
+cursor: pointer; } 
+.details { display: none; color: #555; font-style: italic; }
+ input[type="checkbox"], input[type="radio"] { cursor: pointer; }
+ button { background-color: #e67e22;
+ color: #fff; padding: 10px 20px;
+ border: none;
+ border-radius: 5px;
+ cursor: pointer; 
+margin-top: 20px; } 
+button:hover { background-color: #ca6f1e; }
+#user-info-form 
+{ 
+display: none; /* مخفي افتراضيًا */
+ margin-top: 20px;
+ max-width: 400px;
+ margin: 20px auto;
+ background-color: #fff; 
+padding: 20px; 
+border-radius: 5px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+label
+ {
+ display: block;
+ margin-bottom: 10px;
+ font-weight: bold;
+ } 
+input[type="text"], input[type="email"] 
+{
+ width: 100%;
+ padding: 10px;
+ margin-bottom: 20px;
+ border: 1px solid #ddd; 
+border-radius: 5px; 
+} 
+#submit-button 
+{ background-color: #e67e22; /* لون برتقالي دافئ */
+ color: #fff; padding: 10px 20px;
+ border: none;
+ border-radius: 5px; 
+cursor: pointer;
+ } 
+#submit-button:hover { background-color: #ca6f1e; /* لون برتقالي أغمق */ }
